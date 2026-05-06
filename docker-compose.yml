@@ -14,8 +14,8 @@ services:
       tty: true
       stdin_open: true
       environment:
-        - 'RAILS_ENV=development'
-        - 'DATABASE_PASSWORD=postgres'
+        RAILS_ENV: development
+        DATABASE_PASSWORD: postgres
       depends_on:
         - db
       links:
@@ -27,5 +27,5 @@ services:
         - 'db-data:/var/lib/postgresql/data'
       environment:
         POSTGRES_PASSWORD: postgres
-      environment:
-       - 'POSTGRES_HOST_AUTH_METHOD=trust'
+        POSTGRES_HOST_AUTH_METHOD: trust
+
